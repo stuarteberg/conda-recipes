@@ -26,7 +26,7 @@ else
         --with-cloog=$PREFIX \
         --disable-multilib
 fi
-make
+make -j$CPU_COUNT
 make install
 rm $PREFIX/lib64
 
