@@ -111,3 +111,6 @@ find "$PREFIX" -name '*la.backup' -print0 | xargs -0  rm -f
 
 # Link cc to gcc
 (cd "$PREFIX"/bin && ln -s gcc cc)
+
+# This script is used by post-link.sh
+cp "${RECIPE_DIR}"/remove-obsolete-libstdcxx.sh ${PREFIX}/bin/remove-obsolete-libstdcxx.sh
